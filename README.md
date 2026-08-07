@@ -2,6 +2,8 @@
 
 A personal Ironman training archive built with React, Vite and Supabase.
 
+Live app: [tomoconstrutor.github.io/IronGrowth](https://tomoconstrutor.github.io/IronGrowth/)
+
 ## Local development
 
 ```bash
@@ -20,6 +22,10 @@ Without environment variables, the app opens in local mode and stores workout lo
 5. Sign in once with the personal email address, then disable new sign-ups under Authentication to keep the app private.
 
 The 12-week plan is created idempotently on the first sign-in. The frontend never uses a secret key or `service_role`.
+
+## GitHub Pages
+
+Every push to `main` runs the test suite, builds the app with the `/IronGrowth/` base path and deploys `dist/client` through GitHub Pages.
 
 ## Verification
 

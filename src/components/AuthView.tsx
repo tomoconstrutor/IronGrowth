@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { supabase } from "../lib/supabase";
+import { assetUrl } from "../lib/assets";
 
 export function AuthView() {
   const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ export function AuthView() {
     setMessage("");
     const { error } = await supabase.auth.signInWithOtp({
       email,
-      options: { emailRedirectTo: window.location.origin },
+      options: { emailRedirectTo: new URL(import.meta.env.BASE_URL, window.location.origin).toString() },
     });
     setBusy(false);
     setMessage(error ? "CONNECTION REFUSED. CHECK THE EMAIL ADDRESS." : "LINK SENT. OPEN THE EMAIL ON THIS DEVICE.");
@@ -22,7 +23,7 @@ export function AuthView() {
   return (
     <main className="auth-screen">
       <div className="auth-photo" aria-hidden="true">
-        <img src="/assets/photos/underwater-fighter.webp" alt="" />
+        <img src={assetUrl("assets/photos/underwater-fighter.webp")} alt="" />
       </div>
       <section className="auth-panel">
         <p className="eyebrow">PERSONAL ARCHIVE // RESTRICTED ACCESS</p>

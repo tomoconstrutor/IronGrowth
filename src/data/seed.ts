@@ -1,4 +1,5 @@
 import type { PlannedWorkout, RaceMilestone, TrainingPlan } from "../types";
+import { assetUrl } from "../lib/assets";
 
 export const PLAN_START_DATE = "2026-08-10";
 export const SEED_VERSION = 1;
@@ -248,13 +249,13 @@ export const seedWorkouts: PlannedWorkout[] = Array.from({ length: 12 }, (_, wee
 }).flat();
 
 export const photoArchive = [
-  { src: "/assets/photos/underwater-fighter.webp", alt: "Athlete training underwater", crop: "underwater", caption: "BREATH. STRENGTH. SILENCE." },
-  { src: "/assets/photos/finish-line-collapse.webp", alt: "Exhausted athlete after the finish", crop: "collapse", caption: "THE FINISH ISN'T PRETTY." },
-  { src: "/assets/photos/city-runner.webp", alt: "Runner on a city street", crop: "runner", caption: "RUN WHEN NOBODY ASKS." },
-  { src: "/assets/photos/yellow-cyclist.webp", alt: "Cyclist wearing yellow kit", crop: "yellow-bike", caption: "Z2. NO DRAMA." },
-  { src: "/assets/photos/vintage-bike.webp", alt: "Athlete on a vintage bike", crop: "vintage-bike", caption: "IT STARTED BEFORE DATA." },
-  { src: "/assets/photos/road-cyclist-bw.webp", alt: "Road cyclist in black and white", crop: "road-bw", caption: "EAT. DRINK. RIDE." },
-  { src: "/assets/photos/mini-motorbike.webp", alt: "Man in a suit on a mini motorbike", crop: "mini-bike", caption: "WRONG SCALE. RIGHT ATTITUDE." },
-  { src: "/assets/photos/error-tie.webp", alt: "Tie made from error windows", crop: "error", caption: "FAILURE GOES IN THE ARCHIVE." },
-  { src: "/assets/photos/smoking-kills-racing.webp", alt: "Racing driver in an archive image", crop: "racing", caption: "CONTROLLED RISK." },
+  { src: assetUrl("assets/photos/underwater-fighter.webp"), alt: "Athlete training underwater", crop: "underwater", caption: "BREATH. STRENGTH. SILENCE." },
+  { src: assetUrl("assets/photos/finish-line-collapse.webp"), alt: "Exhausted athlete after the finish", crop: "collapse", caption: "THE FINISH ISN'T PRETTY." },
+  { src: assetUrl("assets/photos/city-runner.webp"), alt: "Runner on a city street", crop: "runner", caption: "RUN WHEN NOBODY ASKS." },
+  { src: assetUrl("assets/photos/yellow-cyclist.webp"), alt: "Cyclist wearing yellow kit", crop: "yellow-bike", caption: "Z2. NO DRAMA." },
+  { src: assetUrl("assets/photos/vintage-bike.webp"), alt: "Athlete on a vintage bike", crop: "vintage-bike", caption: "IT STARTED BEFORE DATA." },
+  { src: assetUrl("assets/photos/road-cyclist-bw.webp"), alt: "Road cyclist in black and white", crop: "road-bw", caption: "EAT. DRINK. RIDE." },
+  { src: assetUrl("assets/photos/mini-motorbike.webp"), alt: "Man in a suit on a mini motorbike", crop: "mini-bike", caption: "WRONG SCALE. RIGHT ATTITUDE." },
+  { src: assetUrl("assets/photos/error-tie.webp"), alt: "Tie made from error windows", crop: "error", caption: "FAILURE GOES IN THE ARCHIVE." },
+  { src: assetUrl("assets/photos/smoking-kills-racing.webp"), alt: "Racing driver in an archive image", crop: "racing", caption: "CONTROLLED RISK." },
 ];
