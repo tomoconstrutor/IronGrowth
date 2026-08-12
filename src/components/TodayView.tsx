@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react";
 import { RotatingArchive } from "./RotatingArchive";
 import { raceMilestones } from "../data/seed";
 import { daysUntil, formatLongDate, nextWorkout, todayInLisbon } from "../lib/date";
+import { loadDailyUpdates, type DailyUpdate } from "../lib/dailyUpdates";
 import { completionRate, totalsBySport } from "../lib/metrics";
 import type { PlannedWorkout, WorkoutLog } from "../types";
 
 const sportLabel = { swim: "SWIM", bike: "BIKE", run: "RUN", strength: "STRENGTH" } as const;
+
+function formatDailyWorkout(workout: DailyUpdate["workouts"][number]) {
+  const bits = [
+    workout.durationMin ? `${workout.durationMin}′` : null,
+    workout.distance ? `${workout.distance}${workout.distanceUnit ?? "km"}` : null,
+    workout.calories ? `${workout.calories} kcal` : null,
+    workout.avgHr ? `${workout.avgHr} bpm` : null,
+    workout.rpe ? `RPE ${workout.rpe}` : null,
+  ].filter(Boolean);
+  return bits.length ? bits.join(" // ") : workout.notes ?? "ARCHIVED";
+}
 
 interface TodayViewProps {
   weekNumber: number;
@@ -15,11 +28,23 @@ interface TodayViewProps {
 
 export function TodayView({ weekNumber, workouts, logs, onRegister }: TodayViewProps) {
   const today = todayInLisbon();
+  const [dailyUpdates, setDailyUpdates] = useState<DailyUpdate[]>([]);
   const weekWorkouts = workouts.filter((workout) => workout.weekNumber === weekNumber);
   const todayWorkouts = workouts.filter((workout) => workout.date === today);
   const next = nextWorkout(workouts, today);
   const rate = completionRate(weekWorkouts, logs);
   const totals = totalsBySport(weekWorkouts, logs);
+  const latestUpdate = dailyUpdates[0];
+
+  useEffect(() => {
+    let active = true;
+    void loadDailyUpdates().then((updates) => {
+      if (active) setDailyUpdates(updates);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   return (
     <div className="today-view">
@@ -66,6 +91,28 @@ export function TodayView({ weekNumber, workouts, logs, onRegister }: TodayViewP
               </button>
             );
           })}
+        </section>
+
+        <section className="daily-report" aria-label="Latest daily update">
+          <div className="section-label"><span>DAILY UPDATE</span><span>{latestUpdate?.date ?? "—"}</span></div>
+          {latestUpdate ? (
+            <div className="daily-report-card">
+              <div className="daily-report-head">
+                <span className={`daily-status daily-status-${latestUpdate.status}`}>{latestUpdate.status === "published" ? "PUBLISHED" : "DRAFT"}</span>
+                <strong>{latestUpdate.calories ? `${latestUpdate.calories} kcal` : "CALORIES —"}</strong>
+                {latestUpdate.bodyWeightKg && <small>{latestUpdate.bodyWeightKg} KG</small>}
+              </div>
+              {latestUpdate.workouts.length ? latestUpdate.workouts.map((workout, index) => (
+                <article key={`${latestUpdate.date}-${workout.title}-${index}`}>
+                  <span>{workout.source ?? workout.type.toUpperCase()}</span>
+                  <b>{workout.title}</b>
+                  <small>{formatDailyWorkout(workout)}</small>
+                  {workout.notes && <p>{workout.notes}</p>}
+                </article>
+              )) : <p className="daily-empty">NO WORKOUTS ARCHIVED YET.</p>}
+              {latestUpdate.notes && <p className="daily-notes">{latestUpdate.notes}</p>}
+            </div>
+          ) : <div className="daily-report-card"><p className="daily-empty">WAITING FOR FIELD DATA.</p></div>}
         </section>
 
         <section className="discipline-strips" aria-label="Progress by sport">
