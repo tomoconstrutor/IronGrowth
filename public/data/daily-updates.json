@@ -1,10 +1,23 @@
 [
   {
     "date": "2026-08-12",
-    "status": "draft",
+    "status": "published",
     "calories": null,
     "bodyWeightKg": null,
-    "workouts": [],
-    "notes": "Daily updates will be published here from Hermes."
+    "workouts": [
+      {
+        "type": "bike",
+        "title": "Strava bike workout completed: Volta de bicicleta à hora do almoço. Distance 29.",
+        "durationMin": null,
+        "distance": 29.63,
+        "distanceUnit": "km",
+        "calories": null,
+        "avgHr": null,
+        "rpe": null,
+        "source": "Strava",
+        "notes": "Strava bike workout completed: Volta de bicicleta à hora do almoço. Distance 29.63 km. Moving time 1:28:03. Elevation gain 129 m. Max elevation 101 m. Average speed 20.2 km/h. Max speed 52.6 km/h. Visible engagement: 1 kudos, 2 comments."
+      }
+    ],
+    "notes": "Published automatically by Hermes."
   }
 ]
