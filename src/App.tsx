@@ -6,6 +6,7 @@ import { RegisterView } from "./components/RegisterView";
 import { TodayView } from "./components/TodayView";
 import { seedWorkouts } from "./data/seed";
 import { getPlanWeek, nextWorkout, todayInLisbon } from "./lib/date";
+import { dailyUpdatesToLogs, loadDailyUpdates, type DailyUpdate } from "./lib/dailyUpdates";
 import { bootstrapRemotePlan, isSupabaseConfigured, loadLocalLogs, loadRemoteLogs, saveLocalLog, saveRemoteLog, supabase } from "./lib/supabase";
 import type { AppView, PlannedWorkout, WorkoutLog } from "./types";
 
@@ -23,8 +24,24 @@ export function App() {
   const [authLoading, setAuthLoading] = useState(isSupabaseConfigured);
   const [syncState, setSyncState] = useState<"local" | "syncing" | "synced" | "error">(isSupabaseConfigured ? "syncing" : "local");
   const [logs, setLogs] = useState<WorkoutLog[]>(() => loadLocalLogs());
+  const [dailyUpdates, setDailyUpdates] = useState<DailyUpdate[]>([]);
   const initialWorkout = useMemo(() => nextWorkout(seedWorkouts, today) ?? seedWorkouts[0], [today]);
   const [selectedWorkout, setSelectedWorkout] = useState<PlannedWorkout>(initialWorkout);
+  const displayedLogs = useMemo(() => {
+    const feedLogs = dailyUpdatesToLogs(dailyUpdates, seedWorkouts);
+    const localKeys = new Set(logs.map((log) => log.sourceKey));
+    return [...logs, ...feedLogs.filter((log) => !localKeys.has(log.sourceKey))];
+  }, [dailyUpdates, logs]);
+
+  useEffect(() => {
+    let active = true;
+    void loadDailyUpdates().then((updates) => {
+      if (active) setDailyUpdates(updates);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
   useEffect(() => {
     if (!supabase) return;
@@ -102,9 +119,9 @@ export function App() {
       </header>
 
       <main className="app-content">
-        {view === "today" && <TodayView weekNumber={currentWeek} workouts={seedWorkouts} logs={logs} onRegister={openRegister} />}
-        {view === "plan" && <PlanView currentWeek={currentWeek} workouts={seedWorkouts} logs={logs} onRegister={openRegister} />}
-        {view === "register" && <RegisterView selectedWorkout={selectedWorkout} workouts={seedWorkouts} logs={logs} onSelect={setSelectedWorkout} onSave={saveLog} />}
+        {view === "today" && <TodayView weekNumber={currentWeek} workouts={seedWorkouts} logs={displayedLogs} dailyUpdates={dailyUpdates} onRegister={openRegister} />}
+        {view === "plan" && <PlanView currentWeek={currentWeek} workouts={seedWorkouts} logs={displayedLogs} onRegister={openRegister} />}
+        {view === "register" && <RegisterView selectedWorkout={selectedWorkout} workouts={seedWorkouts} logs={displayedLogs} onSelect={setSelectedWorkout} onSave={saveLog} />}
       </main>
 
       <nav className="app-nav" aria-label="Main navigation">

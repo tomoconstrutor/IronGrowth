@@ -148,6 +148,7 @@ button, select { cursor: pointer; }
 .sport-bike .sport-bar, .sport-bike.discipline-strip::before { background: var(--olive-dark); }
 .sport-run .sport-bar, .sport-run.discipline-strip::before { background: var(--race-red); }
 .sport-strength .sport-bar, .sport-strength.discipline-strip::before { background: var(--mustard); }
+.nutrition-strip::before { background: var(--ink); }
 .session-copy { min-width: 0; }
 .session-copy small, .session-copy span { display: block; font-size: 9px; color: var(--olive-dark); }
 .session-copy b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; text-transform: uppercase; }
@@ -157,19 +158,6 @@ button, select { cursor: pointer; }
 .status-dot.status-completed { background: var(--olive); }
 .status-skipped { color: var(--race-red); text-decoration: line-through; }
 .status-dot.status-skipped { background: var(--race-red); }
-.daily-report { margin-top: 22px; }
-.daily-report-card { border-bottom: 1px solid var(--ink); background: rgba(203, 187, 139, 0.22); }
-.daily-report-head { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--line); }
-.daily-report-head strong { justify-self: end; font-family: "Anton", sans-serif; font-size: 24px; font-weight: 400; }
-.daily-report-head small { color: var(--olive-dark); font-size: 10px; font-weight: 800; }
-.daily-status { padding: 5px 7px; border: 1px solid currentColor; font-size: 9px; font-weight: 800; }
-.daily-status-published { color: var(--olive-dark); }
-.daily-status-draft { color: var(--mustard); }
-.daily-report article { padding: 11px 0; border-bottom: 1px solid var(--line); }
-.daily-report article span, .daily-report article small { display: block; color: var(--olive-dark); font-size: 9px; font-weight: 800; }
-.daily-report article b { display: block; margin: 2px 0; text-transform: uppercase; }
-.daily-report article p, .daily-empty, .daily-notes { margin: 6px 0 0; color: var(--olive-dark); font-size: 11px; }
-.daily-empty, .daily-notes { padding: 12px 0; }
 .discipline-strips { margin-top: 18px; }
 .discipline-strip { position: relative; display: grid; grid-template-columns: 66px minmax(80px, 1fr) 126px; align-items: center; gap: 10px; min-height: 38px; padding-left: 12px; border-bottom: 1px solid var(--line); }
 .discipline-strip::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 6px; background: var(--steel); }
