@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-08-13",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "run",
+        "title": "Strava run workout completed: Corrida ao anoitecer. Distance 4.32 km. Moving tim",
+        "durationMin": 1820,
+        "distance": 4.32,
+        "distanceUnit": "km",
+        "avgHr": null,
+        "rpe": null,
+        "source": "Strava",
+        "notes": "Strava run workout completed: Corrida ao anoitecer. Distance 4.32 km. Moving time 30:20. Average pace 7:01/km. Elevation gain 70 m. Max elevation 101 m. Steps 4568."
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-08-12",
     "status": "published",
     "caloriesTarget": null,
