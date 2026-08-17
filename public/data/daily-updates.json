@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-08-17",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "run",
+        "title": "Strava run workout completed: Corrida. Distance 7.40 km. Moving time 44:29. Aver",
+        "durationMin": 2669,
+        "distance": 7.4,
+        "distanceUnit": "km",
+        "avgHr": null,
+        "rpe": null,
+        "source": "Strava",
+        "notes": "Strava run workout completed: Corrida. Distance 7.40 km. Moving time 44:29. Average pace 6:00/km. Elevation gain 86 m. Max elevation 102 m. Steps 6796. Achievement: 2nd best 5k time."
+      }
+    ],
+    "notes": "Surf completed today: 2 hours."
+  },
+  {
     "date": "2026-08-16",
     "status": "published",
     "caloriesTarget": null,
