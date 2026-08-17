@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-17",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [],
+    "notes": "Morning check-in: body weight 77.9 kg, sleep 8/10, resting HR 60 bpm on waking. // Food update: breakfast - one bread/toast with butter, one bread/toast with honey, 3 eggs. Image also shows a chocolate milk/drink, confirm if consumed. // Food correction: chocolate milk/drink in breakfast image was consumed."
+  },
+  {
     "date": "2026-08-16",
     "status": "published",
     "caloriesTarget": null,
@@ -18,26 +26,6 @@
       }
     ],
     "notes": "Morning check-in: sleep 6/10, body weight 77.1 kg, resting HR 71 bpm (checked a bit late). // Food update: breakfast image - 2 slices bread with scrambled eggs/omelette, black coffee or tea. // Food correction: breakfast was 2 slices bread, 3 eggs cooked with a bit of olive oil, and black tea. // Food correction: add 1 teaspoon honey in black tea. // Food update for day 16: merenda mista; 2 dates; 2 pasteis de nata; 3 bananas; 1 pizza pastry/folhado; 1 can tuna in olive oil on bread; 3 pork steaks/bifinhos with packet crisps; 2 bowls vegetable soup; 120g chocolate cake. // Surf completed on day 16: 2 hours."
-  },
-  {
-    "date": "2026-08-17",
-    "status": "published",
-    "caloriesTarget": null,
-    "bodyWeightKg": null,
-    "workouts": [
-      {
-        "type": "run",
-        "title": "Strava run workout completed: Corrida. Distance 7.40 km. Moving time 44:29. Aver",
-        "durationMin": 2669,
-        "distance": 7.4,
-        "distanceUnit": "km",
-        "avgHr": null,
-        "rpe": null,
-        "source": "Strava",
-        "notes": "Strava run workout completed: Corrida. Distance 7.40 km. Moving time 44:29. Average pace 6:00/km. Elevation gain 86 m. Max elevation 102 m. Steps 6796. Achievement: 2nd best 5k time."
-      }
-    ],
-    "notes": "Surf completed today: 2 hours."
   },
   {
     "date": "2026-08-15",
