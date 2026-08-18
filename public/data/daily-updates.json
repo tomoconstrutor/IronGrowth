@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-18",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-08-13",
     "status": "published",
     "caloriesTarget": null,
