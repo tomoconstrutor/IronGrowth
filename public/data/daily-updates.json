@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-08-24",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "strength",
+        "title": "Calisthenics A + Legs + Bulletproofing A",
+        "durationMin": null,
+        "distance": null,
+        "distanceUnit": null,
+        "avgHr": null,
+        "rpe": null,
+        "source": "Manual",
+        "notes": "Treino planeado feito; completou 2 rondas de cada bloco."
+      },
+      {
+        "type": "padel",
+        "title": "Padel ao fim do dia",
+        "durationMin": null,
+        "distance": null,
+        "distanceUnit": null,
+        "avgHr": null,
+        "rpe": null,
+        "source": "Manual",
+        "notes": "Jogou padel ao fim do dia."
+      }
+    ],
+    "notes": "Manual update from Tomas."
+  },
+  {
     "date": "2026-08-18",
     "status": "published",
     "caloriesTarget": null,
