@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-08-25",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "bike",
+        "title": "Hoje fiz a bicicleta. Amanhã faço a corrida.",
+        "durationMin": null,
+        "distance": null,
+        "distanceUnit": null,
+        "avgHr": null,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Hoje fiz a bicicleta. Amanhã faço a corrida."
+      }
+    ],
+    "notes": "Peso jejum 77,6 kg"
+  },
+  {
     "date": "2026-08-24",
     "status": "published",
     "caloriesTarget": null,
