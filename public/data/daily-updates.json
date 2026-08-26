@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-08-26",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "run",
+        "title": "Só fiz a corrida hoje",
+        "durationMin": null,
+        "distance": null,
+        "distanceUnit": null,
+        "avgHr": null,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Só fiz a corrida hoje"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-08-25",
     "status": "published",
     "caloriesTarget": null,
