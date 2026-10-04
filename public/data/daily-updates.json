@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-04",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "run",
+        "title": "Garmin run: 111 min, 18.01 km, pace 6:09/km, HR 149/161, cadence 167 spm, activi",
+        "durationMin": 111,
+        "distance": 18.01,
+        "distanceUnit": "km",
+        "avgHr": 149,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin run: 111 min, 18.01 km, pace 6:09/km, HR 149/161, cadence 167 spm, activity_id 24598941954"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-10-01",
     "status": "published",
     "caloriesTarget": null,
