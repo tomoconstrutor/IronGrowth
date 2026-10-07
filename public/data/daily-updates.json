@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-10-07",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "swim",
+        "title": "Garmin swim: 35.4 min, 1.4 km, HR 135/161, strokes 151, activity_id 24644121834",
+        "durationMin": 35,
+        "distance": 1.4,
+        "distanceUnit": "km",
+        "avgHr": 135,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin swim: 35.4 min, 1.4 km, HR 135/161, strokes 151, activity_id 24644121834"
+      },
+      {
+        "type": "bike",
+        "title": "Garmin bike: 28.6 min, 6.24 km, HR 115/159, activity_id 24639420289",
+        "durationMin": 29,
+        "distance": 6.24,
+        "distanceUnit": "km",
+        "avgHr": 115,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin bike: 28.6 min, 6.24 km, HR 115/159, activity_id 24639420289"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-10-06",
     "status": "published",
     "caloriesTarget": null,
