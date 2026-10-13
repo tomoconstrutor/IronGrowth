@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-13",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "bike",
+        "title": "Garmin bike: 126 min, 31.57 km, HR 115/157, activity_id 24714007339",
+        "durationMin": 126,
+        "distance": 31.57,
+        "distanceUnit": "km",
+        "avgHr": 115,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin bike: 126 min, 31.57 km, HR 115/157, activity_id 24714007339"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-10-12",
     "status": "published",
     "caloriesTarget": null,
