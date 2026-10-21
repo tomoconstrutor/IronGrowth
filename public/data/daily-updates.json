@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-21",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "swim",
+        "title": "Garmin swim: 44.3 min, 1.1 km, HR 133/167, strokes 82, activity_id 24807052893",
+        "durationMin": 44,
+        "distance": 1.1,
+        "distanceUnit": "km",
+        "avgHr": 133,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin swim: 44.3 min, 1.1 km, HR 133/167, strokes 82, activity_id 24807052893"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-10-20",
     "status": "published",
     "caloriesTarget": null,
