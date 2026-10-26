@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-26",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "strength",
+        "title": "Garmin strength: 52 min, HR 103/143, activity_id 24861060283",
+        "durationMin": 52,
+        "distance": null,
+        "distanceUnit": null,
+        "avgHr": 103,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin strength: 52 min, HR 103/143, activity_id 24861060283"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-10-25",
     "status": "published",
     "caloriesTarget": null,
