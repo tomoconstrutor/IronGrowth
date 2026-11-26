@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-11-26",
+    "status": "published",
+    "caloriesTarget": null,
+    "bodyWeightKg": null,
+    "workouts": [
+      {
+        "type": "run",
+        "title": "Garmin run: 30.2 min, 5.59 km, pace 5:23/km, HR 165/177, cadence 170 spm, activi",
+        "durationMin": 30,
+        "distance": 5.59,
+        "distanceUnit": "km",
+        "avgHr": 165,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin run: 30.2 min, 5.59 km, pace 5:23/km, HR 165/177, cadence 170 spm, activity_id 25204892745"
+      },
+      {
+        "type": "swim",
+        "title": "Garmin swim: 63.2 min, 2.05 km, HR 143/172, strokes 579, activity_id 25204164246",
+        "durationMin": 63,
+        "distance": 2.05,
+        "distanceUnit": "km",
+        "avgHr": 143,
+        "rpe": null,
+        "source": "Hermes",
+        "notes": "Garmin swim: 63.2 min, 2.05 km, HR 143/172, strokes 579, activity_id 25204164246"
+      }
+    ],
+    "notes": "Published automatically by Hermes."
+  },
+  {
     "date": "2026-11-25",
     "status": "published",
     "caloriesTarget": null,
